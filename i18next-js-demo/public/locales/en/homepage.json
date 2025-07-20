@@ -1,0 +1,9 @@
+{
+  "title": "International Demo",
+  "description": "This is a demo project for testing i18n translation plugin",
+  "features": {
+    "fast": "Fast Development",
+    "modern": "Modern Framework",
+    "scalable": "Scalable Architecture"
+  }
+}
