@@ -1,13 +1,11 @@
 # Next.js i18n Demo Projects
 
-This folder contains 4 comprehensive demo projects for testing the i18n Translate Pro: Web plugin:
+This folder contains 2 comprehensive demo projects for testing the i18n Translate Pro: Web plugin:
 
 ## Projects Structure
 
 - **intl-demo/** - next-intl + TypeScript + App Router
-- **intl-js-demo/** - next-intl + JavaScript + App Router  
 - **i18next-demo/** - next-i18next + TypeScript + Pages Router
-- **i18next-js-demo/** - next-i18next + JavaScript + Pages Router
 
 ## Quick Start
 

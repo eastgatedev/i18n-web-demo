@@ -4,12 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains 4 comprehensive Next.js demo projects designed for testing the i18n Translate Pro: Web plugin across different internationalization configurations:
+This repository contains 2 comprehensive Next.js demo projects designed for testing the i18n Translate Pro: Web plugin across different internationalization configurations:
 
 - **intl-demo/**: next-intl + TypeScript + App Router
-- **intl-js-demo/**: next-intl + JavaScript + App Router  
 - **i18next-demo/**: next-i18next + TypeScript + Pages Router
-- **i18next-js-demo/**: next-i18next + JavaScript + Pages Router
 
 ## Common Development Commands
 
@@ -30,9 +28,7 @@ npm run lint
 
 ### Project-specific ports:
 - intl-demo: Port 3000
-- intl-js-demo: Port 3001
-- i18next-demo: Port 3002  
-- i18next-js-demo: Port 3003
+- i18next-demo: Port 3002
 
 ## Architecture Overview
 
@@ -44,13 +40,7 @@ nextjs-i18n-demo/
 ├── intl-demo/                  # next-intl TypeScript demo
 │   ├── src/messages/           # Translation files (next-intl)
 │   └── next.config.js
-├── intl-js-demo/               # next-intl JavaScript demo
-│   ├── src/messages/           # Translation files (next-intl)
-│   └── next.config.js  
-├── i18next-demo/               # next-i18next TypeScript demo
-│   ├── public/locales/         # Translation files (next-i18next)
-│   └── next-i18next.config.js
-└── i18next-js-demo/            # next-i18next JavaScript demo
+└── i18next-demo/               # next-i18next TypeScript demo
     ├── public/locales/         # Translation files (next-i18next)
     └── next-i18next.config.js
 ```
