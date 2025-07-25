@@ -1,0 +1,26 @@
+{
+  "common": {
+    "welcome": "Welcome to our website",
+    "navigation": "Navigation",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "title": "International Demo",
+    "description": "This is a demo project for testing i18n translation plugin",
+    "features": {
+      "title": "Features",
+      "fast": "Fast Development",
+      "modern": "Modern Framework",
+      "scalable": "Scalable Architecture"
+    }
+  },
+  "plurals": {
+    "item": "no items | one item | {count} items",
+    "user": "no users online | one user online | {count} users online",
+    "notification": "no notifications | one notification | {count} notifications waiting",
+    "product": "no products | {count} product | {count} products",
+    "comment": "no comments | {count} comment | {count} comments"
+  }
+}

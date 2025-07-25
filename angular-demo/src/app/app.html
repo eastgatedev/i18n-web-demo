@@ -1,0 +1,42 @@
+<div class="content">
+  <h1>{{ 'homepage.title' | translate }}</h1>
+  <p>{{ 'homepage.description' | translate }}</p>
+  
+  <div class="language-switcher">
+    <button (click)="switchLanguage('en')">English</button>
+    <button (click)="switchLanguage('es')">Español</button>
+    <button (click)="switchLanguage('fr')">Français</button>
+    <button (click)="switchLanguage('my')">Bahasa Melayu</button>
+    <button (click)="switchLanguage('zh')">中文</button>
+    <button (click)="switchLanguage('zh-TW')">繁體中文</button>
+  </div>
+  
+  <nav>{{ 'common.navigation' | translate }}</nav>
+  <ul>
+    <li><a>{{ 'common.home' | translate }}</a></li>
+    <li><a>{{ 'common.about' | translate }}</a></li>
+    <li><a>{{ 'common.contact' | translate }}</a></li>
+  </ul>
+  
+  <section>
+    <h2>{{ 'homepage.features.title' | translate }}</h2>
+    <ul>
+      <li>{{ 'homepage.features.fast' | translate }}</li>
+      <li>{{ 'homepage.features.modern' | translate }}</li>
+      <li>{{ 'homepage.features.scalable' | translate }}</li>
+    </ul>
+  </section>
+  
+  <div>
+    <h3>Pluralization Examples:</h3>
+    <p>{{ 'plurals.item' | translate: {count: 0} }}</p>
+    <p>{{ 'plurals.item' | translate: {count: 1} }}</p>
+    <p>{{ 'plurals.item' | translate: {count: 5} }}</p>
+    <p>{{ 'plurals.user' | translate: {count: 0} }}</p>
+    <p>{{ 'plurals.user' | translate: {count: 1} }}</p>
+    <p>{{ 'plurals.user' | translate: {count: 3} }}</p>
+    <p>{{ 'plurals.notification' | translate: {count: 0} }}</p>
+    <p>{{ 'plurals.notification' | translate: {count: 1} }}</p>
+    <p>{{ 'plurals.notification' | translate: {count: 10} }}</p>
+  </div>
+</div>

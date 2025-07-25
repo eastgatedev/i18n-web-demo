@@ -1,0 +1,26 @@
+{
+  "common": {
+    "welcome": "Welcome to our website",
+    "navigation": "Navigation",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "title": "International Demo",
+    "description": "This is a demo project for testing i18n translation plugin",
+    "features": {
+      "title": "Features",
+      "fast": "Fast Development",
+      "modern": "Modern Framework",
+      "scalable": "Scalable Architecture"
+    }
+  },
+  "plurals": {
+    "item": "You have {count, plural, =0 {no items} =1 {one item} other {# items}}",
+    "user": "There {count, plural, =0 {are no users} =1 {is one user} other {are # users}} online",
+    "notification": "{count, plural, =0 {No notifications} =1 {One notification} other {# notifications}} waiting",
+    "product": "{count, plural, =0 {no products} =1 {one product} other {# products}}",
+    "comment": "{count, plural, =0 {no comments} =1 {one comment} other {# comments}}"
+  }
+}
