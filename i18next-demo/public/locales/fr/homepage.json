@@ -1,1 +1,9 @@
-{}
+{
+  "title": "Démo Internationale",
+  "description": "Il s'agit d'un projet de démonstration pour tester le plugin de traduction i18n",
+  "features": {
+    "fast": "Développement Rapide",
+    "modern": "Framework Moderne",
+    "scalable": "Architecture Évolutive"
+  }
+}

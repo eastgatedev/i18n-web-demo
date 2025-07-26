@@ -1,1 +1,26 @@
-{}
+{
+  "common": {
+    "welcome": "歡迎來到我們的網站",
+    "navigation": "導覽",
+    "home": "首頁",
+    "about": "關於",
+    "contact": "聯絡"
+  },
+  "homepage": {
+    "title": "國際示範",
+    "description": "這是一個用於測試i18n翻譯插件的示範項目",
+    "features": {
+      "title": "特色",
+      "fast": "快速開發",
+      "modern": "現代框架",
+      "scalable": "可擴展架構"
+    }
+  },
+  "plurals": {
+    "item": "沒有項目 | 一個項目 | {count} 個項目",
+    "user": "沒有在線使用者 | 一位在線使用者 | {count} 位在線使用者",
+    "notification": "沒有通知 | 一條通知 | {count} 條通知等待中",
+    "product": "沒有產品 | {count} 個產品 | {count} 個產品",
+    "comment": "沒有評論 | {count} 則評論 | {count} 則評論"
+  }
+}

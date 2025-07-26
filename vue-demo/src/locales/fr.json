@@ -1,1 +1,26 @@
-{}
+{
+  "common": {
+    "welcome": "Bienvenue sur notre site web",
+    "navigation": "Navigation",
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "homepage": {
+    "title": "Démo Internationale",
+    "description": "Il s'agit d'un projet de démonstration pour tester le plugin de traduction i18n",
+    "features": {
+      "title": "Fonctionnalités",
+      "fast": "Développement Rapide",
+      "modern": "Framework Moderne",
+      "scalable": "Architecture Évolutive"
+    }
+  },
+  "plurals": {
+    "item": "aucun élément | un élément | {count} éléments",
+    "user": "aucun utilisateur en ligne | un utilisateur en ligne | {count} utilisateurs en ligne",
+    "notification": "aucune notification | une notification | {count} notifications en attente",
+    "product": "aucun produit | {count} produit | {count} produits",
+    "comment": "aucun commentaire | {count} commentaire | {count} commentaires"
+  }
+}

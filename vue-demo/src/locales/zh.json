@@ -1,1 +1,26 @@
-{}
+{
+  "common": {
+    "welcome": "欢迎访问我们的网站",
+    "navigation": "导航",
+    "home": "主页",
+    "about": "关于",
+    "contact": "联系"
+  },
+  "homepage": {
+    "title": "国际演示",
+    "description": "这是一个用于测试国际化翻译插件的演示项目",
+    "features": {
+      "title": "特点",
+      "fast": "快速开发",
+      "modern": "现代框架",
+      "scalable": "可扩展架构"
+    }
+  },
+  "plurals": {
+    "item": "无项目 | 一个项目 | {count} 个项目",
+    "user": "无在线用户 | 一个在线用户 | {count} 个在线用户",
+    "notification": "无通知 | 一个通知 | {count} 条待处理通知",
+    "product": "无产品 | {count} 个产品 | {count} 个产品",
+    "comment": "无评论 | {count} 条评论 | {count} 条评论"
+  }
+}

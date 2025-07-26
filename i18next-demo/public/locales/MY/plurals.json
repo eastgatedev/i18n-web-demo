@@ -1,0 +1,11 @@
+{
+  "item": "Anda mempunyai satu item",
+  "item_plural": "Anda mempunyai {{count}} item",
+  "item_zero": "Anda tidak mempunyai item",
+  "user": "Terdapat satu pengguna dalam talian",
+  "user_plural": "Terdapat {{count}} pengguna dalam talian",
+  "user_zero": "Tiada pengguna dalam talian",
+  "notification": "Satu pemberitahuan menunggu",
+  "notification_plural": "{{count}} pemberitahuan menunggu",
+  "notification_zero": "Tiada pemberitahuan"
+}

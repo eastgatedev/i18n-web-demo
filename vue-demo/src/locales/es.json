@@ -1,1 +1,26 @@
-{}
+{
+  "common": {
+    "welcome": "Bienvenido a nuestro sitio web",
+    "navigation": "Navegación",
+    "home": "Inicio",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "homepage": {
+    "title": "Demostración Internacional",
+    "description": "Este es un proyecto de demostración para probar el complemento de traducción i18n",
+    "features": {
+      "title": "Características",
+      "fast": "Desarrollo rápido",
+      "modern": "Framework moderno",
+      "scalable": "Arquitectura escalable"
+    }
+  },
+  "plurals": {
+    "item": "sin elementos | un elemento | {count} elementos",
+    "user": "sin usuarios en línea | un usuario en línea | {count} usuarios en línea",
+    "notification": "sin notificaciones | una notificación | {count} notificaciones esperando",
+    "product": "sin productos | {count} producto | {count} productos",
+    "comment": "sin comentarios | {count} comentario | {count} comentarios"
+  }
+}

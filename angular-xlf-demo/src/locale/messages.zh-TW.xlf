@@ -1,58 +1,110 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" target-language="zh-TW" datatype="plaintext" original="ng2.template">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" target-language="zh-TW" trgLang="zh-TW" version="1.2">
+  <file datatype="plaintext" original="ng2.template" source-language="en-US" target-language="zh-TW">
     <body>
       <trans-unit id="homepage.title" datatype="html">
         <source>International Demo</source>
-        <target></target>
+        <target>International Demo</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="homepage.description" datatype="html">
         <source>This is a demo project for testing i18n translation plugin</source>
-        <target></target>
+        <target>This is a demo project for testing i18n translation plugin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="common.navigation" datatype="html">
         <source>Navigation</source>
-        <target></target>
+        <target>Navigation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="common.home" datatype="html">
         <source>Home</source>
-        <target></target>
+        <target>Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="common.about" datatype="html">
         <source>About</source>
-        <target></target>
+        <target>About</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="common.contact" datatype="html">
         <source>Contact</source>
-        <target></target>
+        <target>Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">13,16</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="homepage.features.title" datatype="html">
         <source>Features</source>
-        <target></target>
+        <target>Features</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">17,19</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="homepage.features.fast" datatype="html">
         <source>Fast Development</source>
-        <target></target>
+        <target>Fast Development</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="homepage.features.modern" datatype="html">
         <source>Modern Framework</source>
-        <target></target>
+        <target>Modern Framework</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="homepage.features.scalable" datatype="html">
         <source>Scalable Architecture</source>
-        <target></target>
+        <target>Scalable Architecture</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">21,26</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="plurals.item" datatype="html">
         <source>You have one item</source>
-        <target></target>
+        <target>You have one item</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="plurals.user" datatype="html">
         <source>There is one user online</source>
-        <target></target>
+        <target>There is one user online</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="plurals.notification" datatype="html">
         <source>One notification waiting</source>
-        <target></target>
+        <target>One notification waiting</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
       </trans-unit>
     </body>
   </file>

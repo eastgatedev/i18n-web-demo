@@ -1,0 +1,9 @@
+{
+  "title": "國際演示",
+  "description": "這是一個用於測試i18n翻譯插件的演示項目",
+  "features": {
+    "fast": "快速開發",
+    "modern": "現代框架",
+    "scalable": "可擴展架構"
+  }
+}

@@ -1,1 +1,26 @@
-{}
+{
+  "common": {
+    "welcome": "欢迎访问我们的网站",
+    "navigation": "导航",
+    "home": "主页",
+    "about": "关于",
+    "contact": "联系"
+  },
+  "homepage": {
+    "title": "国际演示",
+    "description": "这是一个用于测试国际化翻译插件的演示项目",
+    "features": {
+      "title": "特点",
+      "fast": "快速开发",
+      "modern": "现代框架",
+      "scalable": "可扩展架构"
+    }
+  },
+  "plurals": {
+    "item": "您有{count, plural, =0 {没有项目} =1 {一个项目} other {# 个项目}}",
+    "user": "当前有{count, plural, =0 {没有用户} =1 {一个用户} other {# 个用户}}在线",
+    "notification": "{count, plural, =0 {没有通知} =1 {一个通知} other {# 条通知}}等待",
+    "product": "{count, plural, =0 {没有产品} =1 {一个产品} other {# 个产品}}",
+    "comment": "{count, plural, =0 {没有评论} =1 {一条评论} other {# 条评论}}"
+  }
+}

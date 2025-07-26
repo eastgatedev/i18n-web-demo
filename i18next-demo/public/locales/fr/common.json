@@ -1,1 +1,7 @@
-{}
+{
+  "welcome": "Bienvenue sur notre site web",
+  "navigation": "Navigation",
+  "home": "Accueil",
+  "about": "À propos",
+  "contact": "Contact"
+}
