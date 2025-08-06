@@ -1,7 +1,5 @@
-'use client';
-
-import { usePathname, useRouter } from 'next/navigation';
-import { useLocale, useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 interface Language {
   code: string;
@@ -20,15 +18,11 @@ const languages: Language[] = [
 
 export default function LanguageSwitcher() {
   const router = useRouter();
-  const pathname = usePathname();
-  const locale = useLocale();
-  const t = useTranslations('common');
+  const { t } = useTranslation('common');
 
-  const switchLanguage = (newLocale: string) => {
-    // Remove the current locale from the pathname
-    const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
-    // Navigate to the new locale
-    router.push(`/${newLocale}${pathWithoutLocale}`);
+  const switchLanguage = (locale: string) => {
+    const { pathname, asPath, query } = router;
+    router.push({ pathname, query }, asPath, { locale });
   };
 
   const detectPreferredLanguage = () => {
@@ -38,7 +32,7 @@ export default function LanguageSwitcher() {
       browserLang === lang.code
     );
     
-    if (supportedLang && supportedLang.code !== locale) {
+    if (supportedLang && supportedLang.code !== router.locale) {
       switchLanguage(supportedLang.code);
     } else {
       alert(`Your browser language (${browserLang}) is already active or not supported. Supported languages: ${languages.map(l => l.code).join(', ')}`);
@@ -57,7 +51,7 @@ export default function LanguageSwitcher() {
             key={language.code}
             onClick={() => switchLanguage(language.code)}
             className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-              locale === language.code
+              router.locale === language.code
                 ? 'bg-blue-500 text-white shadow-md'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
             }`}
@@ -77,9 +71,9 @@ export default function LanguageSwitcher() {
       </button>
 
       <div className="mt-3 text-sm text-gray-600 dark:text-gray-400">
-        <strong>{t('language.currentLanguage')}:</strong> {locale?.toUpperCase()}
+        <strong>{t('language.currentLanguage')}:</strong> {router.locale?.toUpperCase()}
         <br />
-        <strong>URL Structure:</strong> /{locale === 'en' ? '' : locale + '/'}
+        <strong>URL Structure:</strong> /{router.locale === 'en' ? '' : router.locale + '/'}
       </div>
     </div>
   );

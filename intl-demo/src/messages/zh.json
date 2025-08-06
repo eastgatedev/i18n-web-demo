@@ -4,7 +4,12 @@
     "navigation": "导航",
     "home": "首页",
     "about": "关于",
-    "contact": "联系"
+    "contact": "联系",
+    "language": {
+      "switchLanguage": "切换语言",
+      "autoDetect": "自动检测浏览器语言",
+      "currentLanguage": "当前语言"
+    }
   },
   "homepage": {
     "title": "国际演示",

@@ -4,7 +4,12 @@
     "navigation": "Navigation",
     "home": "Home",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "language": {
+      "switchLanguage": "Switch Language",
+      "autoDetect": "Auto-Detect Browser Language",
+      "currentLanguage": "Current Language"
+    }
   },
   "homepage": {
     "title": "International Demo",

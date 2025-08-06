@@ -4,7 +4,12 @@
     "navigation": "Navegación",
     "home": "Inicio",
     "about": "Acerca de",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "language": {
+      "switchLanguage": "Cambiar Idioma",
+      "autoDetect": "Auto-Detectar Idioma del Navegador",
+      "currentLanguage": "Idioma Actual"
+    }
   },
   "homepage": {
     "title": "Demostración Internacional",

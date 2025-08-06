@@ -4,7 +4,12 @@
     "navigation": "Navigasi",
     "home": "Laman Utama",
     "about": "Tentang",
-    "contact": "Hubungi"
+    "contact": "Hubungi",
+    "language": {
+      "switchLanguage": "Tukar Bahasa",
+      "autoDetect": "Auto-Kesan Bahasa Pelayar",
+      "currentLanguage": "Bahasa Semasa"
+    }
   },
   "homepage": {
     "title": "Demo Antarabangsa",

@@ -4,7 +4,12 @@
     "navigation": "導覽",
     "home": "首頁",
     "about": "關於",
-    "contact": "聯絡"
+    "contact": "聯絡",
+    "language": {
+      "switchLanguage": "切換語言",
+      "autoDetect": "自動偵測瀏覽器語言",
+      "currentLanguage": "目前語言"
+    }
   },
   "homepage": {
     "title": "國際示範",

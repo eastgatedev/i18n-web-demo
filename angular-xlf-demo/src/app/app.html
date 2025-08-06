@@ -3,7 +3,18 @@
   <p i18n="@@homepage.description">This is a demo project for testing i18n translation plugin</p>
   
   <div class="language-switcher">
-    <span>Language switching would be handled by Angular i18n build configurations</span>
+    <button 
+      *ngFor="let language of languages" 
+      (click)="switchLanguage(language.code)"
+      [class.active]="isCurrentLanguage(language.code)">
+      {{ language.name }}
+    </button>
+    <button 
+      class="detection-demo" 
+      (click)="showLanguageDetection()"
+      title="Demo: Browser Language Detection">
+      🌐 Auto-Detect
+    </button>
   </div>
   
   <nav i18n="@@common.navigation">Navigation</nav>

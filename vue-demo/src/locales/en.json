@@ -4,7 +4,12 @@
     "navigation": "Navigation",
     "home": "Home",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "language": {
+      "switchLanguage": "Switch Language",
+      "autoDetect": "Auto-Detect Browser Language",
+      "currentLanguage": "Current Language"
+    }
   },
   "homepage": {
     "title": "International Demo",
@@ -17,10 +22,8 @@
     }
   },
   "plurals": {
-    "item": "no items | one item | {count} items",
-    "user": "no users online | one user online | {count} users online",
-    "notification": "no notifications | one notification | {count} notifications waiting",
-    "product": "no products | {count} product | {count} products",
-    "comment": "no comments | {count} comment | {count} comments"
+    "item": "no items | one item | {n} items",
+    "user": "no users online | one user online | {n} users online",
+    "notification": "no notifications | one notification | {n} notifications waiting"
   }
 }

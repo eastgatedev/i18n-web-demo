@@ -3,5 +3,10 @@
   "navigation": "Navigation",
   "home": "Accueil",
   "about": "À propos",
-  "contact": "Contact"
+  "contact": "Contact",
+  "language": {
+    "switchLanguage": "Changer de Langue",
+    "autoDetect": "Auto-Détecter la Langue du Navigateur",
+    "currentLanguage": "Langue Actuelle"
+  }
 }
