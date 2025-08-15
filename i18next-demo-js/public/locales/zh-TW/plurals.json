@@ -1,0 +1,11 @@
+{
+  "item": "您有一個項目",
+  "item_plural": "您有{{count}}個項目",
+  "item_zero": "您沒有任何項目",
+  "user": "目前有一位使用者在線上",
+  "user_plural": "目前有{{count}}位使用者在線上",
+  "user_zero": "目前沒有使用者在線上",
+  "notification": "有一則通知在等待",
+  "notification_plural": "{{count}}則通知在等待",
+  "notification_zero": "沒有通知"
+}

@@ -1,0 +1,11 @@
+{
+  "item": "您有一个项目",
+  "item_plural": "您有{{count}}个项目",
+  "item_zero": "您没有项目",
+  "user": "有一个用户在线",
+  "user_plural": "有{{count}}个用户在线",
+  "user_zero": "没有用户在线",
+  "notification": "有一个通知等待",
+  "notification_plural": "{{count}}个通知等待",
+  "notification_zero": "没有通知"
+}

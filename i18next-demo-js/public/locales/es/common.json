@@ -1,0 +1,12 @@
+{
+  "welcome": "Bienvenido a nuestro sitio web",
+  "navigation": "Navegación",
+  "home": "Inicio",
+  "about": "Acerca de",
+  "contact": "Contacto",
+  "language": {
+    "switchLanguage": "Cambiar Idioma",
+    "autoDetect": "Auto-Detectar Idioma del Navegador",
+    "currentLanguage": "Idioma Actual"
+  }
+}

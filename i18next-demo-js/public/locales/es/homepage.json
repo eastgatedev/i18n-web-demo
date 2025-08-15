@@ -1,0 +1,9 @@
+{
+  "title": "Demostración Internacional",
+  "description": "Este es un proyecto de demostración para probar el complemento de traducción i18n",
+  "features": {
+    "fast": "Desarrollo Rápido",
+    "modern": "Framework Moderno",
+    "scalable": "Arquitectura Escalable"
+  }
+}

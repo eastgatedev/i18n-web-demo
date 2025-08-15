@@ -4,10 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains 5 comprehensive demo projects designed for testing the i18n Translate Pro: Web plugin across different internationalization configurations:
+This repository contains 7 comprehensive demo projects designed for testing the i18n Translate Pro: Web plugin across different internationalization configurations:
 
 - **intl-demo/**: Next.js + next-intl + TypeScript + App Router
+- **intl-demo-js/**: Next.js + next-intl + JavaScript + App Router
 - **i18next-demo/**: Next.js + next-i18next + TypeScript + Pages Router
+- **i18next-demo-js/**: Next.js + next-i18next + JavaScript + Pages Router
 - **vue-demo/**: Vue.js + vue-i18n + TypeScript + Vite
 - **angular-demo/**: Angular + ngx-translate + TypeScript
 - **angular-xlf-demo/**: Angular + XLIFF + TypeScript
@@ -16,7 +18,7 @@ This repository contains 5 comprehensive demo projects designed for testing the 
 
 ### Framework-specific commands:
 
-#### Next.js projects (intl-demo, i18next-demo):
+#### Next.js projects (intl-demo, intl-demo-js, i18next-demo, i18next-demo-js):
 ```bash
 npm run dev          # Development server (port 3000)
 npm run build        # Build project
@@ -59,7 +61,13 @@ i18n-web-demo/
 ├── intl-demo/                  # next-intl TypeScript demo
 │   ├── src/messages/           # Translation files (next-intl)
 │   └── next.config.js
+├── intl-demo-js/               # next-intl JavaScript demo
+│   ├── src/messages/           # Translation files (next-intl)
+│   └── next.config.js
 ├── i18next-demo/               # next-i18next TypeScript demo
+│   ├── public/locales/         # Translation files (next-i18next)
+│   └── next-i18next.config.js
+├── i18next-demo-js/            # next-i18next JavaScript demo
 │   ├── public/locales/         # Translation files (next-i18next)
 │   └── next-i18next.config.js
 ├── vue-demo/                   # Vue.js + vue-i18n demo

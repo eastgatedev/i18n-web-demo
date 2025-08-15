@@ -4,8 +4,13 @@ This folder contains comprehensive demo projects for testing the i18n Translate 
 
 ## Projects Structure
 
+### Next.js Projects
 - **intl-demo/** - Next.js + next-intl + TypeScript + App Router
+- **intl-demo-js/** - Next.js + next-intl + JavaScript + App Router
 - **i18next-demo/** - Next.js + next-i18next + TypeScript + Pages Router
+- **i18next-demo-js/** - Next.js + next-i18next + JavaScript + Pages Router
+
+### Other Framework Projects
 - **vue-demo/** - Vue.js + vue-i18n + TypeScript
 - **angular-demo/** - Angular + ngx-translate + TypeScript (JSON format)
 - **angular-xlf-demo/** - Angular + Angular i18n + TypeScript (XLF/XLIFF format)

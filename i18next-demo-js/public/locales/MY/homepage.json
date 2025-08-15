@@ -1,0 +1,9 @@
+{
+  "title": "Demo Antarabangsa",
+  "description": "Ini adalah projek demo untuk menguji plugin terjemahan i18n",
+  "features": {
+    "fast": "Pembangunan Pantas",
+    "modern": "Kerangka Kerja Moden",
+    "scalable": "Senibina Berkemampuan Diperluaskan"
+  }
+}

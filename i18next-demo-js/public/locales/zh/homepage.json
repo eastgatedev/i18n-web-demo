@@ -1,0 +1,9 @@
+{
+  "title": "国际演示",
+  "description": "这是一个用于测试国际化翻译插件的演示项目",
+  "features": {
+    "fast": "快速开发",
+    "modern": "现代框架",
+    "scalable": "可扩展架构"
+  }
+}

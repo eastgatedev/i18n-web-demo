@@ -1,0 +1,28 @@
+{
+  "common": {
+    "welcome": "歡迎來到我們的網站",
+    "navigation": "導覽",
+    "home": "首頁",
+    "about": "關於",
+    "contact": "聯絡",
+    "language": {
+      "switchLanguage": "切換語言",
+      "autoDetect": "自動偵測瀏覽器語言",
+      "currentLanguage": "目前語言"
+    }
+  },
+  "homepage": {
+    "title": "國際示範",
+    "description": "這是一個用於測試i18n翻譯插件的示範項目",
+    "features": {
+      "fast": "快速開發",
+      "modern": "現代框架",
+      "scalable": "可擴展架構"
+    }
+  },
+  "plurals": {
+    "items": "您有{count, plural, =0 {沒有項目} =1 {一個項目} other {#個項目}}",
+    "users": "線上有{count, plural, =0 {沒有使用者} =1 {一位使用者} other {#位使用者}}",
+    "notifications": "{count, plural, =0 {沒有通知} =1 {一則通知} other {#則通知}}在等待"
+  }
+}

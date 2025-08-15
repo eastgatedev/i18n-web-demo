@@ -1,0 +1,12 @@
+{
+  "welcome": "Welcome to our website",
+  "navigation": "Navigation",
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "language": {
+    "switchLanguage": "Switch Language",
+    "autoDetect": "Auto-Detect Browser Language",
+    "currentLanguage": "Current Language"
+  }
+}

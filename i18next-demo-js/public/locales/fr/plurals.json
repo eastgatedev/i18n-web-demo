@@ -1,0 +1,11 @@
+{
+  "item": "Vous avez un article",
+  "item_plural": "Vous avez {{count}} articles",
+  "item_zero": "Vous n'avez aucun article",
+  "user": "Il y a un utilisateur en ligne",
+  "user_plural": "Il y a {{count}} utilisateurs en ligne",
+  "user_zero": "Il n'y a aucun utilisateur en ligne",
+  "notification": "Une notification en attente",
+  "notification_plural": "{{count}} notifications en attente",
+  "notification_zero": "Aucune notification"
+}

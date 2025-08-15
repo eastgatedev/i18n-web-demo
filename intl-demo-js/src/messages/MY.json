@@ -1,0 +1,28 @@
+{
+  "common": {
+    "welcome": "Selamat datang ke laman web kami",
+    "navigation": "Navigasi",
+    "home": "Laman Utama",
+    "about": "Tentang",
+    "contact": "Hubungi",
+    "language": {
+      "switchLanguage": "Tukar Bahasa",
+      "autoDetect": "Auto-Kesan Bahasa Pelayar",
+      "currentLanguage": "Bahasa Semasa"
+    }
+  },
+  "homepage": {
+    "title": "Demo Antarabangsa",
+    "description": "Ini adalah projek demo untuk menguji plugin terjemahan i18n",
+    "features": {
+      "fast": "Pembangunan Pantas",
+      "modern": "Kerangka Kerja Moden",
+      "scalable": "Senibina Berkebolehan Diperluaskan"
+    }
+  },
+  "plurals": {
+    "items": "Anda mempunyai {count, plural, =0 {tiada item} =1 {satu item} other {# item}}",
+    "users": "Terdapat {count, plural, =0 {tiada pengguna} =1 {satu pengguna} other {# pengguna}} dalam talian",
+    "notifications": "{count, plural, =0 {Tiada pemberitahuan} =1 {Satu pemberitahuan} other {# pemberitahuan}} menunggu"
+  }
+}
