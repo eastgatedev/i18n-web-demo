@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import LanguageSwitcher from '../components/LanguageSwitcher.vue'
 
 onMounted(() => {
@@ -9,6 +9,37 @@ onMounted(() => {
 const itemCount = ref(0)
 const userCount = ref(1)
 const notificationCount = ref(0)
+
+// Smart Variable Naming Test Data
+const userProfile = ref({
+  profile: { firstName: 'Sarah', lastName: 'Johnson' },
+  getStatus: () => 'premium',
+  notifications: { count: 5 }
+})
+
+const orderData = ref({
+  id: 'ORD-12345',
+  customer: { name: 'Alex Smith' },
+  shippingStatus: 'shipped',
+  getShippingStatus() { return this.shippingStatus }
+})
+
+const systemData = ref({
+  items: [{ name: 'Product A' }],
+  PROCESSING_STATUS: 'ACTIVE',
+  getCurrentTime: () => new Date().toLocaleTimeString()
+})
+
+// Computed template literals for testing
+const welcomeMessage = computed(() => 
+  `Welcome ${userProfile.value.profile.firstName}! You have ${userProfile.value.notifications.count} notifications`
+)
+const orderStatusMessage = computed(() => 
+  `Order #${orderData.value.id} for ${orderData.value.customer.name} is ${orderData.value.getShippingStatus()}`
+)
+const systemStatusMessage = computed(() => 
+  `Processing ${systemData.value.items[0].name} with status ${systemData.value.PROCESSING_STATUS} at ${systemData.value.getCurrentTime()}`
+)
 
 const incrementCount = (counter: 'item' | 'user' | 'notification') => {
   switch (counter) {
@@ -159,6 +190,115 @@ const decrementCount = (counter: 'item' | 'user' | 'notification') => {
           </div>
         </div>
 
+        <!-- Smart Variable Naming Test Demo -->
+        <div class="md:col-span-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/20">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+            🧠 Smart Variable Naming Test
+          </h2>
+          <div class="mb-6">
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Use the <strong>Smart Text to i18n</strong> plugin on these template literals to see semantic variable naming in action!
+            </p>
+            <div class="grid md:grid-cols-3 gap-4">
+              <!-- User Profile Section -->
+              <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded">
+                <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-200">👤 User Profile</h4>
+                <div class="space-y-2 mb-3">
+                  <input 
+                    type="text" 
+                    v-model="userProfile.profile.firstName"
+                    class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                    placeholder="First Name"
+                  />
+                  <input 
+                    type="number" 
+                    v-model.number="userProfile.notifications.count"
+                    class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                    placeholder="Notification Count"
+                  />
+                </div>
+                <div class="p-3 bg-white dark:bg-gray-800 rounded text-sm">
+                  <strong>Template:</strong>
+                  <code class="block mt-1 p-2 bg-gray-100 dark:bg-gray-700 rounded text-xs">
+                    {{ welcomeMessage }}
+                  </code>
+                </div>
+              </div>
+
+              <!-- Order Status Section -->
+              <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded">
+                <h4 class="font-semibold mb-2 text-green-800 dark:text-green-200">📦 Order Status</h4>
+                <div class="space-y-2 mb-3">
+                  <input 
+                    type="text" 
+                    v-model="orderData.customer.name"
+                    class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                    placeholder="Customer Name"
+                  />
+                  <select 
+                    v-model="orderData.shippingStatus"
+                    class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                  >
+                    <option value="shipped">Shipped</option>
+                    <option value="pending">Pending</option>
+                    <option value="delivered">Delivered</option>
+                  </select>
+                </div>
+                <div class="p-3 bg-white dark:bg-gray-800 rounded text-sm">
+                  <strong>Template:</strong>
+                  <code class="block mt-1 p-2 bg-gray-100 dark:bg-gray-700 rounded text-xs">
+                    {{ orderStatusMessage }}
+                  </code>
+                </div>
+              </div>
+
+              <!-- System Status Section -->
+              <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded">
+                <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-200">⚙️ System Status</h4>
+                <div class="space-y-2 mb-3">
+                  <input 
+                    type="text" 
+                    v-model="systemData.items[0].name"
+                    class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                    placeholder="Item Name"
+                  />
+                  <button
+                    @click="systemData.getCurrentTime = () => new Date().toLocaleTimeString()"
+                    class="w-full px-2 py-1 text-sm bg-purple-500 text-white rounded hover:bg-purple-600"
+                  >
+                    Refresh Time
+                  </button>
+                </div>
+                <div class="p-3 bg-white dark:bg-gray-800 rounded text-sm">
+                  <strong>Template:</strong>
+                  <code class="block mt-1 p-2 bg-gray-100 dark:bg-gray-700 rounded text-xs">
+                    {{ systemStatusMessage }}
+                  </code>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded">
+              <h4 class="font-semibold mb-2 text-yellow-800 dark:text-yellow-200">🎯 How to Test Smart Variable Naming:</h4>
+              <ol class="list-decimal list-inside space-y-1 text-sm text-yellow-700 dark:text-yellow-300">
+                <li>Select any template literal code above (the code inside the gray boxes)</li>
+                <li>Use the "Smart Text to i18n" plugin feature</li>
+                <li>Compare the generated placeholders:</li>
+              </ol>
+              <div class="mt-3 grid md:grid-cols-2 gap-4 text-xs">
+                <div class="p-2 bg-red-100 dark:bg-red-900/30 rounded">
+                  <strong class="text-red-800 dark:text-red-200">❌ Generic (Old):</strong>
+                  <code class="block mt-1">"Welcome {0}! You have {1} notifications"</code>
+                </div>
+                <div class="p-2 bg-green-100 dark:bg-green-900/30 rounded">
+                  <strong class="text-green-800 dark:text-green-200">✅ Smart (New):</strong>
+                  <code class="block mt-1">"Welcome {profileFirstName}! You have {notificationsCount} notifications"</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Technical Info -->
         <div class="md:col-span-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/20">
           <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
@@ -173,6 +313,7 @@ const decrementCount = (counter: 'item' | 'user' | 'notification') => {
                 <li>✅ 6 Language Support</li>
                 <li>✅ Dynamic Language Switching</li>
                 <li>✅ Pluralization (vue-i18n style)</li>
+                <li>🧠 Smart Variable Naming Test</li>
                 <li>✅ Composition API</li>
                 <li>✅ Browser Language Detection</li>
                 <li>✅ Reactive State Management</li>

@@ -1,42 +1,314 @@
-<div class="content">
-  <h1>{{ 'homepage.title' | translate }}</h1>
-  <p>{{ 'homepage.description' | translate }}</p>
-  
-  <div class="language-switcher">
-    <button (click)="switchLanguage('en')">English</button>
-    <button (click)="switchLanguage('es')">Español</button>
-    <button (click)="switchLanguage('fr')">Français</button>
-    <button (click)="switchLanguage('my')">Bahasa Melayu</button>
-    <button (click)="switchLanguage('zh')">中文</button>
-    <button (click)="switchLanguage('zh-TW')">繁體中文</button>
-  </div>
-  
-  <nav>{{ 'common.navigation' | translate }}</nav>
-  <ul>
-    <li><a>{{ 'common.home' | translate }}</a></li>
-    <li><a>{{ 'common.about' | translate }}</a></li>
-    <li><a>{{ 'common.contact' | translate }}</a></li>
-  </ul>
-  
-  <section>
-    <h2>{{ 'homepage.features.title' | translate }}</h2>
-    <ul>
-      <li>{{ 'homepage.features.fast' | translate }}</li>
-      <li>{{ 'homepage.features.modern' | translate }}</li>
-      <li>{{ 'homepage.features.scalable' | translate }}</li>
-    </ul>
-  </section>
-  
-  <div>
-    <h3>Pluralization Examples:</h3>
-    <p>{{ 'plurals.item' | translate: {count: 0} }}</p>
-    <p>{{ 'plurals.item' | translate: {count: 1} }}</p>
-    <p>{{ 'plurals.item' | translate: {count: 5} }}</p>
-    <p>{{ 'plurals.user' | translate: {count: 0} }}</p>
-    <p>{{ 'plurals.user' | translate: {count: 1} }}</p>
-    <p>{{ 'plurals.user' | translate: {count: 3} }}</p>
-    <p>{{ 'plurals.notification' | translate: {count: 0} }}</p>
-    <p>{{ 'plurals.notification' | translate: {count: 1} }}</p>
-    <p>{{ 'plurals.notification' | translate: {count: 10} }}</p>
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Header -->
+    <header class="text-center mb-12">
+      <div class="flex justify-center mb-6">
+        <div class="text-center">
+          <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500 mb-2">
+            ANGULAR
+          </div>
+        </div>
+      </div>
+      <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4">
+        {{ 'homepage.title' | translate }}
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+        {{ 'homepage.description' | translate }}
+      </p>
+    </header>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <!-- Language Switcher -->
+      <div class="md:col-span-2">
+        <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/20">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">🌐 Language Switcher</h2>
+          <div class="flex flex-wrap gap-2">
+            <button (click)="switchLanguage('en')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">English</button>
+            <button (click)="switchLanguage('es')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Español</button>
+            <button (click)="switchLanguage('fr')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Français</button>
+            <button (click)="switchLanguage('my')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Bahasa Melayu</button>
+            <button (click)="switchLanguage('zh')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">中文</button>
+            <button (click)="switchLanguage('zh-TW')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">繁體中文</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/20">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+          🚀 {{ 'homepage.features.fast' | translate }}
+        </h2>
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+          ⚡ {{ 'homepage.features.modern' | translate }}
+        </h2>
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+          📈 {{ 'homepage.features.scalable' | translate }}
+        </h2>
+      </div>
+
+      <!-- Pluralization Demo -->
+      <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/20">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+          🔢 Pluralization Demo
+        </h2>
+
+        <div class="space-y-4">
+          <!-- Items Counter -->
+          <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded">
+            <p class="text-lg mb-2">
+              {{ 'plurals.item' | translate: {count: itemCount} }}
+            </p>
+            <div class="flex gap-2">
+              <button
+                (click)="decrementCount('item')"
+                class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+              >
+                -
+              </button>
+              <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded">
+                {{ itemCount }}
+              </span>
+              <button
+                (click)="incrementCount('item')"
+                class="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <!-- Users Counter -->
+          <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded">
+            <p class="text-lg mb-2">
+              {{ 'plurals.user' | translate: {count: userCount} }}
+            </p>
+            <div class="flex gap-2">
+              <button
+                (click)="decrementCount('user')"
+                class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+              >
+                -
+              </button>
+              <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded">
+                {{ userCount }}
+              </span>
+              <button
+                (click)="incrementCount('user')"
+                class="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <!-- Notifications Counter -->
+          <div class="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded">
+            <p class="text-lg mb-2">
+              {{ 'plurals.notification' | translate: {count: notificationCount} }}
+            </p>
+            <div class="flex gap-2">
+              <button
+                (click)="decrementCount('notification')"
+                class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+              >
+                -
+              </button>
+              <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded">
+                {{ notificationCount }}
+              </span>
+              <button
+                (click)="incrementCount('notification')"
+                class="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smart Variable Naming Test Demo -->
+      <div class="md:col-span-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/20">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+          🧠 Smart Variable Naming Test
+        </h2>
+        <div class="mb-6">
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Use the <strong>Smart Text to i18n</strong> plugin on these template literals to see semantic variable naming in action!
+          </p>
+          <div class="p-3 bg-blue-50 dark:bg-blue-900/30 rounded mb-4">
+            <h5 class="font-semibold text-blue-800 dark:text-blue-200 mb-2">📋 How to Test in Angular:</h5>
+            <ol class="text-sm text-blue-700 dark:text-blue-300 space-y-1">
+              <li><strong>1.</strong> Open <code>src/app/app.ts</code> in IntelliJ IDEA</li>
+              <li><strong>2.</strong> Select a template literal (lines 86, 97, or 109)</li>
+              <li><strong>3.</strong> Right-click → "Smart Text to i18n" → Extract</li>
+              <li><strong>4.</strong> Verify it generates semantic placeholders instead of {{ '{0}' }}, {{ '{1}' }}</li>
+              <li><strong>5.</strong> Check it uses <code>this.translate.get()</code> not <code>t()</code></li>
+            </ol>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4">
+            <!-- User Profile Section -->
+            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded">
+              <h4 class="font-semibold mb-2 text-blue-800 dark:text-blue-200">👤 User Profile</h4>
+              <div class="space-y-2 mb-3">
+                <input 
+                  type="text" 
+                  [(ngModel)]="userProfile.profile.firstName"
+                  class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                  placeholder="First Name"
+                />
+                <input 
+                  type="number" 
+                  [(ngModel)]="userProfile.notifications.count"
+                  class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                  placeholder="Notification Count"
+                />
+              </div>
+              <div class="p-3 bg-white dark:bg-gray-800 rounded text-sm">
+                <strong>Template:</strong>
+                <code class="block mt-1 p-2 bg-gray-100 dark:bg-gray-700 rounded text-xs">
+                  {{ welcomeMessage }}
+                </code>
+              </div>
+            </div>
+
+            <!-- Order Status Section -->
+            <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded">
+              <h4 class="font-semibold mb-2 text-green-800 dark:text-green-200">📦 Order Status</h4>
+              <div class="space-y-2 mb-3">
+                <input 
+                  type="text" 
+                  [(ngModel)]="orderData.customer.name"
+                  class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                  placeholder="Customer Name"
+                />
+                <select 
+                  [(ngModel)]="orderData.shippingStatus"
+                  class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                >
+                  <option value="shipped">Shipped</option>
+                  <option value="pending">Pending</option>
+                  <option value="delivered">Delivered</option>
+                </select>
+              </div>
+              <div class="p-3 bg-white dark:bg-gray-800 rounded text-sm">
+                <strong>Template:</strong>
+                <code class="block mt-1 p-2 bg-gray-100 dark:bg-gray-700 rounded text-xs">
+                  {{ orderStatusMessage }}
+                </code>
+              </div>
+            </div>
+
+            <!-- System Status Section -->
+            <div class="p-4 bg-purple-50 dark:bg-purple-900/20 rounded">
+              <h4 class="font-semibold mb-2 text-purple-800 dark:text-purple-200">⚙️ System Status</h4>
+              <div class="space-y-2 mb-3">
+                <input 
+                  type="text" 
+                  [(ngModel)]="systemData.items[0].name"
+                  class="w-full px-2 py-1 text-sm border rounded dark:bg-gray-700 dark:border-gray-600"
+                  placeholder="Item Name"
+                />
+                <button
+                  (click)="refreshTime()"
+                  class="w-full px-2 py-1 text-sm bg-purple-500 text-white rounded hover:bg-purple-600"
+                >
+                  Refresh Time
+                </button>
+              </div>
+              <div class="p-3 bg-white dark:bg-gray-800 rounded text-sm">
+                <strong>Template:</strong>
+                <code class="block mt-1 p-2 bg-gray-100 dark:bg-gray-700 rounded text-xs">
+                  {{ systemStatusMessage }}
+                </code>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded">
+            <h4 class="font-semibold mb-2 text-yellow-800 dark:text-yellow-200">🎯 Expected Smart Variable Naming Results:</h4>
+            <div class="text-sm text-yellow-700 dark:text-yellow-300 space-y-2 mb-3">
+              <p><strong>Template to test:</strong> Select template literal in <code>app.ts</code> lines 86, 97, or 109</p>
+              <p><strong>Plugin should generate:</strong> Semantic placeholders + Angular syntax</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="p-2 bg-red-100 dark:bg-red-900/30 rounded">
+                <strong class="text-red-800 dark:text-red-200">❌ Generic (Wrong):</strong>
+                <code class="block mt-1 mb-1">"Welcome {{ '{0}' }}! You have {{ '{1}' }} notifications"</code>
+                <code class="block text-red-600">t('welcome.message', [...])</code>
+              </div>
+              <div class="p-2 bg-green-100 dark:bg-green-900/30 rounded">
+                <strong class="text-green-800 dark:text-green-200">✅ Smart (Expected):</strong>
+                <code class="block mt-1 mb-1">"Welcome {{ '{profileFirstName}' }}! You have {{ '{notificationsCount}' }} notifications"</code>
+                <code class="block text-green-600">this.translate.get('welcome.message', {{ '{...}' }})</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Info -->
+      <div class="md:col-span-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/20">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+          🔧 Angular + ngx-translate Demo
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-lg font-medium mb-2 text-gray-700 dark:text-gray-200">
+              Features Demonstrated:
+            </h3>
+            <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+              <li>✅ 6 Language Support</li>
+              <li>✅ Dynamic Language Switching</li>
+              <li>✅ Pluralization (ngx-translate style)</li>
+              <li>🧠 Smart Variable Naming Test</li>
+              <li>✅ Component Architecture</li>
+              <li>✅ Two-way Data Binding</li>
+              <li>✅ Browser Language Detection</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium mb-2 text-gray-700 dark:text-gray-200">
+              Architecture:
+            </h3>
+            <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+              <li>🏗️ Angular 20+ Framework</li>
+              <li>📦 ngx-translate Library</li>
+              <li>⚡ Standalone Components</li>
+              <li>📁 JSON Translation Files</li>
+              <li>🔄 Runtime Language Switching</li>
+              <li>🎨 Tailwind CSS Styling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-gray-600 dark:text-gray-400">
+      <div class="flex justify-center items-center gap-4 mb-4">
+        <a
+          href="https://angular.dev/guide/i18n"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 hover:underline"
+        >
+          <span class="w-5 h-5 text-red-500 font-bold text-sm">A</span>
+          Angular i18n Guide
+        </a>
+        <a
+          href="https://github.com/ngx-translate/core"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 hover:underline"
+        >
+          <svg class="w-4 h-4 dark:invert" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+          </svg>
+          ngx-translate GitHub
+        </a>
+      </div>
+      <p>{{ 'common.welcome' | translate }}</p>
+    </footer>
   </div>
 </div>
